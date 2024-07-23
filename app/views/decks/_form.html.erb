@@ -1,0 +1,18 @@
+<%= simple_form_for deck, html: { class: "form-deck" } do |f| %>
+  <% if deck.errors.any? %>
+    <div>
+      <h2><%= pluralize(deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+      <ul>
+        <% deck.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% title = deck.title || "Title" %>
+  <%= f.input :title, label: false, input_html: {class: "form-form__title-input", autofocus: true, placeholder: title } %>
+  <div class="form-deck__btns">
+    <%= link_to "Cancel", decks_path, class: "btn btn--primary" %>
+    <%= f.submit class: "btn btn--secondary" %>
+  </div>
+<% end %>

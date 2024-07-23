@@ -1,0 +1,24 @@
+.form-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-l) var(--space-xs);
+    margin: var(--space-xs);
+    background-color: var(--color-light);
+    // width: 100%;
+    border-radius: var(--border-radius);
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-s);
+        padding-top: var(--space-s);
+    }
+
+    &__title-input {
+        width: 100%;
+        padding-left: var(--space-xs);
+        margin-bottom: var(--space-s);
+    }
+}

@@ -1,0 +1,13 @@
+<%= turbo_frame_tag "deck_#{deck.id}", class: "deck" do %>
+  <li class="deck__li">
+    <%= link_to deck.title, deck_path(deck)%>
+    <div class="deck__icons">
+      <%= link_to edit_deck_path(deck), class: "deck__icon" do%>
+        <%= image_tag("edit.svg", alt: "edit Icon") %>
+      <% end %>
+      <%= button_to deck_path(deck), method: :delete, class: "deck__icon" do %>
+        <%= image_tag("trash.svg", alt: "trash Icon") %>
+      <% end %>
+    </div>
+  </li>
+<% end %>

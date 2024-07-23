@@ -1,0 +1,10 @@
+<section class="decks" >
+  <p class="decks__notice"><%= notice %></p>
+  <h1 class="decks__heading">Decks</h1>
+  <%= turbo_frame_tag "deck-form", class: "decks__new-deck" do %>
+    <%= link_to "Create deck", new_deck_path, class: "btn btn--primary"%>
+  <% end %>
+  <ul class="decks__list">
+    <%= render @decks %>
+  </ul>
+</section>

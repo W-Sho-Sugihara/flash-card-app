@@ -1,0 +1,10 @@
+<div class="decks">
+  <h1>New Deck</h1>
+  <%= turbo_frame_tag "deck-form" do %>
+    <%= render "form", deck: @deck %>
+  <% end %>
+  <br>
+  <div>
+    <%= link_to "Back to decks", decks_path, class: 'btn btn--light' %>
+  </div>
+</div>
